@@ -11,5 +11,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 4. Define the executable and the source files it needs
 add_executable(lob
         src/main.cpp
-        src/order_types.cpp.cpp
+        src/order.cpp.cpp
 )
