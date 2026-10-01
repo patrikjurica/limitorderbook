@@ -3,7 +3,8 @@
 
 typedef enum OrderType {
     LIMIT,
-    MARKET
+    MARKET,
+    IOC
 } OrderType;
 
 typedef enum Side {
@@ -12,10 +13,11 @@ typedef enum Side {
 } Side;
 
 typedef struct Order {
-    int id;
-    int asset;
-    int price;
-    int quantity;
+    unsigned int id;
+    unsigned int timestamp;
+    unsigned int asset;
+    unsigned int price;
+    unsigned int quantity;
     OrderType type;
     Side side;
 } Order;
