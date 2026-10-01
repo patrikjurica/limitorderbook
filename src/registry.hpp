@@ -39,6 +39,14 @@ public:
         return new_id;
     }
 
+    unsigned int get_id(std::string_view name) const {
+        auto it = symbol_to_id_.find(name);
+        if (it != symbol_to_id_.end()) {
+            return it->second;
+        }
+        return size + 1;
+    }
+
     unsigned int get_size() const { return size; }
 } SymbolRegistry;
 
