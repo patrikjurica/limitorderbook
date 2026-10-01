@@ -24,6 +24,8 @@ public:
         while (!is_empty()) {
             dl_node* node = first;
             first = first->next;
+
+            delete node->order;
             delete node;
         }
     }
